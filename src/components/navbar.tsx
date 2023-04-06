@@ -1,5 +1,5 @@
 import { AppBar, styled, Toolbar, Typography } from '@mui/material';
-import {Link} from "@mui/material"
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -13,7 +13,7 @@ export const Navbar = () => {
     <AppBar position='sticky'>
       <StyledToolbar>
         <Typography variant='h6'>Page of records</Typography>
-        <Link href="/" color="inherit" underline="none" variant='h6'>Login</Link>
+        <Link to="/" style={{color:"white", fontSize:"20px", fontWeight:"500", textDecoration:"none"}}>Login</Link>
       </StyledToolbar>
     </AppBar>
   );
