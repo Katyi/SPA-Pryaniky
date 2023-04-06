@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spa-pryaniky/static/css/main.caed22ab.css",
+    "main.js": "/spa-pryaniky/static/js/main.508e726e.js",
+    "index.html": "/spa-pryaniky/index.html",
+    "main.caed22ab.css.map": "/spa-pryaniky/static/css/main.caed22ab.css.map",
+    "main.508e726e.js.map": "/spa-pryaniky/static/js/main.508e726e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caed22ab.css",
+    "static/js/main.508e726e.js"
+  ]
+}
