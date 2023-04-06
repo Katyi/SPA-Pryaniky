@@ -25,7 +25,8 @@ export const Login = ()=> {
       headers: {'Content-Type': 'application/json', 
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-      "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, authorization, accept, x-access-token"},
+      "Access-Control-Allow-Headers": "Content-Type, X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Accept-Encoding, Content-Length, Content-MD5, Date, X-Api-Version, X-File-Name, auth, Authorization, Accept-Auth, x-auth"
+    },
       body: JSON.stringify({
           username: userAuth.username,
           password: userAuth.password,
