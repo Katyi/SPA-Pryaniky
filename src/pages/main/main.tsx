@@ -10,21 +10,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
-import { makeStyles } from '@mui/styles';
 import dayjs from 'dayjs';
 import { Box, Stack } from '@mui/system';
-
-
-const useButtonStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: "column",
-    alignItems: "center",
-    '& > *': {
-      margin: 0,
-    },
-  },
-}))
 
 export interface Post {
   id: string;
@@ -44,7 +31,6 @@ export const Main = () => {
   const [postsList, setPostsList] = useState<Post[] | null>(null);
   const token = localStorage.getItem("token");
   let navigate = useNavigate();
-  let buttonStyles = useButtonStyles();
 
   const getPosts = async () => {
     let data = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/userdocs/get`, 
@@ -135,7 +121,7 @@ export const Main = () => {
                   <TableCell>{dayjs(post.employeeSigDate).format('DD/MM/YYYY HH:mm:ss')}</TableCell>
                   <TableCell>{post.employeeSignatureName}</TableCell>
                   <TableCell >
-                  <div className={buttonStyles.root} style={{paddingLeft: 0, marginLeft: 0}}>
+                  <div style={{paddingLeft: 0, marginLeft: 0}}>
                       <ButtonGroup variant='outlined' aria-label='outlined button group'>
                         <Button
                           style={{ marginRight: 5, fontWeight:"700", borderRadius:"5px" }}
@@ -235,7 +221,7 @@ export const Main = () => {
               sx={{fontSize: {sm:'0.8rem', xs:"12px"}, width:"180px", textAlign:{sm:"start", xs:"center"}}}
               >{post.employeeSignatureName}</Box>
           </Stack>
-          <div className={buttonStyles.root} style={{ paddingLeft: 0 }}>
+          <div style={{ paddingLeft: 0 }}>
             <ButtonGroup variant='outlined' aria-label='outlined button group' style={{margin:'25px auto'}}>
               <Button
                 style={{ marginRight: 10, borderRadius:"5px"}}
