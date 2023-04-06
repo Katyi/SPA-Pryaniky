@@ -1,4 +1,5 @@
 import { useNavigate} from "react-router-dom";
+
 import React, { useState } from 'react';
 import { Button, ButtonGroup, TextField, Typography} from '@mui/material';
 
@@ -25,8 +26,7 @@ export const Login = ()=> {
       headers: {'Content-Type': 'application/json', 
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-      "Access-Control-Allow-Headers": "*"
-    },
+      "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, authorization, accept, x-access-token"},
       body: JSON.stringify({
           username: userAuth.username,
           password: userAuth.password,
