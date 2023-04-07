@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/spa-pryaniky/static/css/main.caed22ab.css",
-    "main.js": "/spa-pryaniky/static/js/main.16d6226b.js",
+    "main.js": "/spa-pryaniky/static/js/main.d9e8aaf5.js",
     "index.html": "/spa-pryaniky/index.html",
     "main.caed22ab.css.map": "/spa-pryaniky/static/css/main.caed22ab.css.map",
-    "main.16d6226b.js.map": "/spa-pryaniky/static/js/main.16d6226b.js.map"
+    "main.d9e8aaf5.js.map": "/spa-pryaniky/static/js/main.d9e8aaf5.js.map"
   },
   "entrypoints": [
     "static/css/main.caed22ab.css",
-    "static/js/main.16d6226b.js"
+    "static/js/main.d9e8aaf5.js"
   ]
 }
