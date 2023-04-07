@@ -20,7 +20,7 @@ export const Login = ()=> {
   const signUpUser = async (e:React.MouseEvent<HTMLElement>) =>{
     e.preventDefault();
     // let result = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/login`, 
-    let result = await fetch(`/api/ru/data/v3/testmethods/docs/login`, 
+    let result = await fetch(`ru/data/v3/testmethods/docs/login`, 
     {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 
