@@ -19,8 +19,8 @@ export const Login = ()=> {
  
   const signUpUser = async (e:React.MouseEvent<HTMLElement>) =>{
     e.preventDefault();
-    console.log(process.env.REACT_APP_REACT_API)
-    let result = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/login`, 
+    // let result = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/login`, 
+    let result = await fetch(`/ru/data/v3/testmethods/docs/login`, 
     {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 
@@ -39,7 +39,6 @@ export const Login = ()=> {
       setIndForMessage(1);
       return;
     }
-    console.log(result);
     let token = result.data.token;
     localStorage.setItem("token", token);
     navigate('/main')

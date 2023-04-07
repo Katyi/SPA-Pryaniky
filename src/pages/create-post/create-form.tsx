@@ -35,11 +35,10 @@ export const CreateForm = () => {
         documentType: newPost.documentType,
         employeeNumber: newPost.employeeNumber,
         employeeSigDate: newPost.employeeSigDate,
-        employeeSignatureName: newPost.companySignatureName,
+        employeeSignatureName: newPost.employeeSignatureName,
       })
     }).then(function(resp){
       return resp.json()}).catch(error=>console.log(error));
-      console.log(result);
       navigate("/main");
   };
 

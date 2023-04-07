@@ -2,6 +2,7 @@
   "name": "spa-pryaniky",
   "version": "0.1.0",
   "homepage": "https://katyi.github.io/spa-pryaniky",
+  "proxy": "https://test.v5.pryaniky.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

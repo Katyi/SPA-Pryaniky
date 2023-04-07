@@ -33,10 +33,11 @@ export const Main = () => {
   let navigate = useNavigate();
 
   const getPosts = async () => {
-    let data = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/userdocs/get`, 
+    let data = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/userdocs/get`,
     {
       method: 'GET',
-      headers: {'x-auth': `${token}`},
+      headers: {'x-auth': `${token}`
+    },
     }).then(function(resp){
       return resp.json()}).catch(error=>console.log(error));
       setPostsList(data.data.map((item:any)=> ({

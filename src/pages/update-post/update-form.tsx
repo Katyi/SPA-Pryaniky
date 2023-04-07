@@ -7,7 +7,6 @@ import dayjs from 'dayjs';
 export const UpdateForm = () => {
   const location = useLocation();
   const { post } = location.state;
-  console.log(post.id);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const [updPost, setUpdPost] = useState<IPost>({
@@ -21,8 +20,7 @@ export const UpdateForm = () => {
     employeeSigDate: post.employeeSigDate ? post.employeeSigDate : "",
     employeeSignatureName: post.employeeSignatureName ? post.employeeSignatureName : "",
   });
-  
-  console.log(post);
+
   const onUpdatePost = async (e:any) => {
     e.preventDefault();
     let result = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/userdocs/set/${post.id}`, {
@@ -39,11 +37,10 @@ export const UpdateForm = () => {
         documentType: updPost.documentType,
         employeeNumber: updPost.employeeNumber,
         employeeSigDate: updPost.employeeSigDate,
-        employeeSignatureName: updPost.companySignatureName,
+        employeeSignatureName: updPost.employeeSignatureName,
       })
     }).then(function(resp){
       return resp.json()}).catch(error=>console.log(error));
-      console.log(result);
       navigate("/main");
   };
 
