@@ -22,10 +22,10 @@ export const Login = ()=> {
     let result = await fetch(`${process.env.REACT_APP_REACT_API}/ru/data/v3/testmethods/docs/login`, 
     {
       method: 'POST',
-      headers: {'Content-Type': 'application/json', 
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-      "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, authorization, accept, x-access-token"},
+      headers: {'Content-Type': 'application/json'}, 
+      // "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
+      // "Access-Control-Allow-Headers": "x-requested-with, Content-Type, origin, authorization, accept, x-access-token"},
       body: JSON.stringify({
           username: userAuth.username,
           password: userAuth.password,
