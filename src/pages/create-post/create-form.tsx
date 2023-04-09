@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate} from "react-router-dom";
 import { Post as IPost } from '../main/main';
 import { Button, ButtonGroup, TextField, Typography } from '@mui/material';
+import dayjs from 'dayjs';
 
 export const CreateForm = () => {
   const navigate = useNavigate();
@@ -45,12 +46,13 @@ export const CreateForm = () => {
   return (
     <React.Fragment>
       <div>
-        <Typography variant='h5' fontWeight="700" marginTop='5%' color='rgb(35, 114, 217)'>ADD NEW RECORD</Typography>
+        <Typography variant='h5' fontWeight="700" marginTop='1.5%' color='rgb(35, 114, 217)'>ADD NEW RECORD</Typography>
         <form autoComplete="off" onSubmit={onCreatePost}>
           <TextField
             type="datetime-local"
             variant="outlined"
             color="primary"
+            helperText='companySigDate'
             sx={{
               marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
@@ -59,7 +61,7 @@ export const CreateForm = () => {
               input: {color: 'rgb(35, 114, 217)'}
             }}
             fullWidth
-            value={newPost.companySigDate}
+            value={dayjs(newPost.companySigDate).format('YYYY-MM-DD HH:mm:ss')}
             onChange={(e)=> setNewPost({...newPost, companySigDate: e.target.value})}
           />
           <TextField
@@ -68,7 +70,7 @@ export const CreateForm = () => {
             variant="outlined"
             color="primary"
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
@@ -85,7 +87,7 @@ export const CreateForm = () => {
             variant="outlined"
             color="primary"
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
@@ -102,7 +104,7 @@ export const CreateForm = () => {
             variant="outlined"
             color="primary"
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
@@ -119,7 +121,7 @@ export const CreateForm = () => {
             variant="outlined"
             color="primary"
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
@@ -134,8 +136,9 @@ export const CreateForm = () => {
             placeholder="employeeNumber"
             variant="outlined"
             color="primary"
+            helperText='employeeNumber'
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
@@ -149,15 +152,16 @@ export const CreateForm = () => {
             type="datetime-local"
             variant="outlined"
             color="primary"
+            helperText='employeeSigDate'
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},
               input: {color: 'rgb(35, 114, 217)'}
             }}
             fullWidth
-            value={newPost.employeeSigDate}
+            value={dayjs(newPost.employeeSigDate).format('YYYY-MM-DD HH:mm:ss')}
             onChange={e=> setNewPost({...newPost, employeeSigDate: e.target.value})}
           />
           <TextField
@@ -166,7 +170,7 @@ export const CreateForm = () => {
             variant="outlined"
             color="primary"
             sx={{
-              marginTop:"10px", 
+              marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
               borderRadius: '5px',
               width:{sm:"300px", xs:"100%"},

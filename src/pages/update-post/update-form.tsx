@@ -47,12 +47,13 @@ export const UpdateForm = () => {
   return (
     <React.Fragment>
       <div>
-        <Typography variant='h5' fontWeight="700" marginTop='5%' color='rgb(35, 114, 217)'>EDIT RECORD</Typography>
+        <Typography variant='h5' fontWeight="700" marginTop='1.5%' color='rgb(35, 114, 217)'>EDIT RECORD</Typography>
         <form onSubmit={onUpdatePost}>
           <TextField 
             type="datetime-local"
             variant="outlined"
             color="primary"
+            helperText='companySigDate'
             sx={{
               marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
@@ -135,6 +136,7 @@ export const UpdateForm = () => {
             placeholder="employeeNumber"
             variant="outlined"
             color="primary"
+            helperText='employeeNumber'
             sx={{
               marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
@@ -150,6 +152,7 @@ export const UpdateForm = () => {
             type="datetime-local"
             variant="outlined"
             color="primary"
+            helperText='employeeSigDate'
             sx={{
               marginTop:"5px", 
               background:'rgba(222, 239, 248, 0.877)',
